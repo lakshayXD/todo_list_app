@@ -2,14 +2,12 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:todo_list_app/features/splash_screen.dart';
-import 'package:todo_list_app/features/todo_list_screen.dart';
+import 'package:todo_list_app/features/todo_list/todo_list_screen.dart';
 
 class RouteGenerator {
   static const Duration _pageTransitionDuration = Duration(milliseconds: 300);
 
   ///screen routes
-  static const String splashScreenRoute = '/splash_screen';
   static const String todoListScreenRoute = '/todo_list_screen';
 
   static const initialRoute = todoListScreenRoute;
@@ -18,8 +16,6 @@ class RouteGenerator {
     final args = settings.arguments as dynamic;
     log("Pushed ${settings.name}(${args ?? ''})");
     switch (settings.name) {
-      case splashScreenRoute:
-        return _route(const SplashScreen());
       case todoListScreenRoute:
         return _route(TodoListScreen());
       default:
@@ -34,9 +30,9 @@ class RouteGenerator {
 
   static Route<dynamic> _errorRoute(String? name) {
     return _route(
-      Scaffold(
+      const Scaffold(
         body: Center(
-          child: Text('ROUTE\n\n$name\n\nNOT FOUND'),
+          child: SizedBox(),
         ),
       ),
     );

@@ -76,7 +76,7 @@ class AppTheme {
       ),
       dialogTheme: DialogTheme(
         elevation: 10,
-        backgroundColor: scaffoldBackgroundColor,
+        backgroundColor: Colors.transparent,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(2),
         ),
@@ -156,7 +156,7 @@ class AppTheme {
         fontWeight: FontWeight.w500,
       ),
       headlineMedium: TextStyle(
-        fontSize: getAdaptiveSize(16),
+        fontSize: getAdaptiveSize(25),
         fontFamily: _defaultFontFamily,
         color: const Color(0xFFFFFFFF),
         fontWeight: FontWeight.w500,
@@ -199,14 +199,14 @@ class AppTheme {
         borderRadius: BorderRadius.circular(2),
         borderSide: const BorderSide(
           width: 0.5,
-          color: Color(0xFF2C2C2C),
+          color: Color(0xFF3A96FF),
         ),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(2),
         borderSide: const BorderSide(
           width: 0.75,
-          color: Color(0xFF2C2C2C),
+          color: Color(0xFF3A96FF),
         ),
       ),
       errorBorder: OutlineInputBorder(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:todo_list_app/theme/app_theme.dart';
+import 'package:todo_list_app/utils/globals.dart';
 import 'package:todo_list_app/utils/route_generator.dart';
 
 void main() async {
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.dark,
       onGenerateRoute: RouteGenerator.generateRoute,
+      scaffoldMessengerKey: AppGlobals.scaffoldMessengerKey,
       initialRoute: RouteGenerator.initialRoute,
     );
   }
