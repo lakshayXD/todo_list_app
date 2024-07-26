@@ -19,7 +19,7 @@ Future<List<Task>> _loadTaskList() async {
       taskIsCompletedList == null ||
       taskTitlesList.isEmpty ||
       taskIsCompletedList.isEmpty) {
-    return [];
+    return [Task(title: 'Model task', isCompleted: false)];
   }
   return List.generate(
       taskTitlesList.length,
